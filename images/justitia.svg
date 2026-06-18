@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Stilisierte Waage der Justitia" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Finial / Knauf -->
+  <circle cx="100" cy="26" r="6" fill="currentColor" stroke="none"/>
+  <!-- Mittelsäule -->
+  <line x1="100" y1="32" x2="100" y2="178"/>
+  <!-- Querbalken -->
+  <line x1="38" y1="50" x2="162" y2="50"/>
+  <!-- Aufhängepunkte am Balken -->
+  <circle cx="38" cy="50" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="162" cy="50" r="3.5" fill="currentColor" stroke="none"/>
+  <!-- Linke Waagschale: Ketten + Schale -->
+  <line x1="38" y1="50" x2="20" y2="92"/>
+  <line x1="38" y1="50" x2="56" y2="92"/>
+  <path d="M14 92 Q38 124 62 92"/>
+  <!-- Rechte Waagschale: Ketten + Schale -->
+  <line x1="162" y1="50" x2="144" y2="92"/>
+  <line x1="162" y1="50" x2="180" y2="92"/>
+  <path d="M138 92 Q162 124 186 92"/>
+  <!-- Standfuß -->
+  <line x1="74" y1="178" x2="126" y2="178"/>
+  <path d="M70 196 Q100 184 130 196"/>
+</svg>

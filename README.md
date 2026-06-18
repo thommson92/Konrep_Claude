@@ -9,17 +9,24 @@ zur Vorbereitung auf das erste und zweite juristische Staatsexamen.
 
 ## Projektstruktur
 
+Die Website liegt im **Repo-Wurzelverzeichnis** (so wird sie direkt über GitHub Pages
+ausgeliefert; für Strato wird der Inhalt – ohne `docs/` und `input/` – in das
+Web-Wurzelverzeichnis geladen).
+
 ```
 .
+├── index.html             Startseite (One-Page)
+├── impressum.html
+├── datenschutz.html
+├── css/  js/  images/  fonts/
+├── favicon.svg
+├── robots.txt  sitemap.xml  .htaccess  .nojekyll
 ├── docs/                  Projektdokumentation
 │   ├── Spezifikation.md    technische Spezifikation (verbindlich)
-│   └── Entscheidungen.md    Entscheidungslog aus der Planungsphase
+│   ├── Entscheidungen.md    Entscheidungslog aus der Planungsphase
+│   ├── Anleitung.md         Pflege, Upload, SSL, SEO
+│   └── STRUKTUR.md          Dateiübersicht
 ├── input/                 Ausgangsmaterial (Flyer, Vorlagen, Profilbild) – nicht verändern
-├── src/                   Quellcode der Website (folgt in der Implementierung)
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── STRUKTUR.md          geplante Dateien & Aufbau
 └── Spezifikation.rtf      ursprüngliche Projektidee/Briefing (Referenz)
 ```
 
