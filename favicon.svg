@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Konrep">
-  <rect width="64" height="64" rx="12" fill="#1b2a4a"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#c9a24b">K</text>
+  <rect width="64" height="64" rx="13" fill="#1b2a4a"/>
+  <g fill="none" stroke="#c9a24b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 14 V50"/>
+    <path d="M22 33 L45 14"/>
+    <path d="M22 33 L46 50"/>
+  </g>
 </svg>
