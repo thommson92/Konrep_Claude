@@ -25,13 +25,12 @@
 window.KONREP_TERMINE = [
 
   {
-    datum:   "Herbst 2026",
+    datum:   "Freitag 10.07.2026 & Samstag 11.07.2026 - jeweils um 9 Uhr",
     titel:   "Intensivkurs Öffentliches Recht – 1. Examen",
     format:  "Digital",
     status:  "frei",
-    betreff: "Anfrage Intensivkurs 1. Examen (Herbst 2026)"
+    betreff: "Anfrage Intensivkurs 1. Examen (Juli 2026)"
   },
-
   {
     datum:   "Herbst 2026",
     titel:   "Intensivkurs Öffentliches Recht – 2. Examen",
