@@ -35,8 +35,21 @@
   var STATUS = {
     frei:       { cls: "status--frei",       label: "Freie Plätze" },
     warteliste: { cls: "status--warteliste", label: "Warteliste" },
-    ausgebucht: { cls: "status--ausgebucht", label: "Ausgebucht" }
+    ausgebucht: { cls: "status--ausgebucht", label: "Ausgebucht" },
+    geplant:    { cls: "status--geplant",    label: "Termine folgen" }
   };
+
+  // Alternative Schreibweisen, die ebenfalls als "geplant" gelten
+  var STATUS_ALIAS = {
+    "noch nicht terminiert": "geplant",
+    "noch nicht verfügbar": "geplant",
+    "angekündigt": "geplant",
+    "angekuendigt": "geplant",
+    "termine folgen": "geplant"
+  };
+
+  // Nur bei diesen Status wird der Button "Platz anfragen" angezeigt
+  var CAN_REQUEST = { frei: true, warteliste: true };
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -55,27 +68,38 @@
     }
     data.forEach(function (t) {
       var key = String(t.status || "").toLowerCase().trim();
+      key = STATUS_ALIAS[key] || key;
       var s = STATUS[key] || STATUS.frei;
 
-      var row = el("div", "termin");
+      var row = el("div", "termin" + (key === "geplant" ? " termin--geplant" : ""));
 
-      row.appendChild(el("div", "termin__date", t.datum || ""));
+      // Spalte 1: Datum (+ optional Uhrzeit)
+      var dateCol = el("div", "termin__date-col");
+      dateCol.appendChild(el("div", "termin__date", t.datum || ""));
+      if (t.uhrzeit) dateCol.appendChild(el("div", "termin__time", t.uhrzeit));
+      row.appendChild(dateCol);
 
+      // Spalte 2: Titel, Format, Inhalts-Details
       var mid = el("div");
       mid.appendChild(el("div", "termin__title", t.titel || ""));
       if (t.format) mid.appendChild(el("div", "termin__meta", t.format));
+
+      var details = t.details;
+      if (typeof details === "string" && details) details = [details];
+      if (Array.isArray(details) && details.length) {
+        var ul = el("ul", "termin__details");
+        details.forEach(function (d) { ul.appendChild(el("li", null, d)); });
+        mid.appendChild(ul);
+      }
       row.appendChild(mid);
 
-      var right = el("div");
-      var badge = el("div", "status " + s.cls, s.label);
-      right.appendChild(badge);
+      // Spalte 3: Status-Badge (+ optional Anfrage-Button)
+      var right = el("div", "termin__action");
+      right.appendChild(el("div", "status " + s.cls, s.label));
 
-      if (key !== "ausgebucht") {
-        var a = el("a", "btn btn--ghost", "Platz anfragen");
+      if (CAN_REQUEST[key]) {
+        var a = el("a", "btn btn--ghost termin__btn", "Platz anfragen");
         a.href = mailtoLink(t.betreff);
-        a.style.marginTop = "0.6rem";
-        a.style.padding = "0.5rem 1rem";
-        a.style.fontSize = "0.9rem";
         right.appendChild(a);
       }
       row.appendChild(right);
