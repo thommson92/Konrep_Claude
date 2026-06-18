@@ -5,7 +5,7 @@ Strato-Webspace geladen werden. Keine Datenbank, kein Login, keine laufende Wart
 
 ## 1. Termine ändern (häufigster Fall)
 
-1. Datei `src/js/termine.js` in einem Texteditor öffnen.
+1. Datei `js/termine.js` in einem Texteditor öffnen.
 2. Einträge zwischen den `{ ... }`-Blöcken anpassen (Anleitung steht oben in der Datei).
    - `status` muss `"frei"`, `"warteliste"` oder `"ausgebucht"` sein.
 3. Speichern und **nur diese Datei** auf den Webspace hochladen (Ordner `js/`).
@@ -14,14 +14,17 @@ Die Termine erscheinen automatisch auf der Startseite im Abschnitt „Nächste T
 
 ## 2. Texte/Preise ändern
 
-- Kurse, Preise, Über-mich-Text stehen in `src/index.html`.
-- Impressum: `src/impressum.html` · Datenschutz: `src/datenschutz.html`.
+- Kurse, Preise, Über-mich-Text stehen in `index.html`.
+- Impressum: `impressum.html` · Datenschutz: `datenschutz.html`.
 - Geänderte Datei speichern und hochladen.
 
 ## 3. Veröffentlichen (Upload zu Strato)
 
-Es wird der **Inhalt des Ordners `src/`** hochgeladen (nicht der Ordner selbst),
+Es werden die **Website-Dateien aus dem Wurzelverzeichnis** hochgeladen
+(`index.html`, `impressum.html`, `datenschutz.html`, die Ordner `css/`, `js/`,
+`images/`, `fonts/` sowie `favicon.svg`, `robots.txt`, `sitemap.xml`, `.htaccess`),
 sodass `index.html` direkt im Web-Wurzelverzeichnis liegt.
+Die Ordner `docs/` und `input/` sowie `.nojekyll` werden **nicht** benötigt.
 
 Zwei Wege:
 - **Strato Datei-Manager** (Browser): im Strato-Kundenbereich unter „Webspace
@@ -48,6 +51,6 @@ Zwei Wege:
 
 ## 6. Bilder austauschen
 
-- Profilbild: `src/images/christian-konrad.jpg` (und `christian-konrad@2x.jpg` für
+- Profilbild: `images/christian-konrad.jpg` (und `christian-konrad@2x.jpg` für
   hohe Auflösung) ersetzen – möglichst gleiche Maße/Hochformat.
 - Nur lizenzfreie/eigene Bilder verwenden.
