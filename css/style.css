@@ -208,25 +208,41 @@ img, svg { max-width: 100%; display: block; }
 .termine-list { display: grid; gap: 1rem; }
 .termin {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1rem 1.25rem;
-  align-items: center;
+  grid-template-columns: minmax(120px, 170px) 1fr auto;
+  gap: 0.75rem 1.25rem;
+  align-items: start;
   background: var(--cream-card);
   border: 1px solid var(--line);
   border-left: 4px solid var(--gold);
   border-radius: var(--radius);
-  padding: 1.1rem 1.3rem;
+  padding: 1.2rem 1.4rem;
   box-shadow: var(--shadow);
 }
+.termin--geplant { border-left-color: var(--navy-soft); background: #f6f7fa; }
 .termin__date {
   font-family: var(--serif);
   color: var(--navy);
   font-weight: 700;
   font-size: 1.05rem;
-  white-space: nowrap;
+  line-height: 1.3;
 }
+.termin__time { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.2rem; }
 .termin__title { font-weight: 600; color: var(--ink); }
 .termin__meta { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.15rem; }
+.termin__details {
+  margin: 0.6rem 0 0;
+  padding-left: 1.05rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.termin__details li { margin-bottom: 0.2rem; }
+.termin__action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+.termin__btn { padding: 0.5rem 1rem; font-size: 0.9rem; white-space: nowrap; }
 .status {
   font-size: 0.82rem;
   font-weight: 700;
@@ -238,6 +254,7 @@ img, svg { max-width: 100%; display: block; }
 .status--frei        { background: #e7f3ea; color: #1f7a44; }
 .status--warteliste  { background: #fbf3e0; color: #9a6a12; }
 .status--ausgebucht  { background: #f4e7e7; color: #9a2c2c; }
+.status--geplant     { background: #e8ecf5; color: #2a3c61; }
 .termine-note { color: var(--ink-soft); font-size: 0.95rem; margin-top: 1.25rem; }
 
 /* ---- Kontakt -------------------------------------------------------------- */
@@ -306,7 +323,7 @@ img, svg { max-width: 100%; display: block; }
   .nav__links a:hover { border-bottom-color: transparent; background: #f3efe6; }
 
   .termin { grid-template-columns: 1fr auto; }
-  .termin__date { grid-column: 1 / -1; }
+  .termin__date-col { grid-column: 1 / -1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
