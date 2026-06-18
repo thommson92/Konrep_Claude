@@ -8,3 +8,6 @@
 # Temporäre Dateien
 *.tmp
 *~
+
+# Bug-Reports / Screenshots (nicht Teil der Website)
+bugs/
