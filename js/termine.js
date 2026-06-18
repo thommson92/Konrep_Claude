@@ -42,10 +42,7 @@ window.KONREP_TERMINE = [
     titel:   "Intensivkurs Öffentliches Recht – 1. Examen",
     format:  "Digital",
     details: [
-      "Wiederholung der examenstypischen Standardprobleme im gesamten Pflichtstoff",
-      "Verfassungsrecht, Europarecht, Verwaltungsverfahrens- und Verwaltungsprozessrecht (VwVfG, VwGO)",
-      "Baurecht, Kommunalrecht (GO), Polizei- und Sicherheitsrecht (PAG, LStVG)",
-      "Staatshaftungsrecht sowie aktuelle Entwicklungen"
+      "Besprechung/Wiederholung examensrelevanter und examenstypischer Problemstellungen aus den Pflichtrechtsgebieten des ÖR (VerfR, EuR, VwVfG, VwGO, BauR, GO, PAG, LStVG, StaatshaftungsR; insb. Standardprobleme und aktuelle Entwicklungen)"
     ],
     status:  "frei",
     betreff: "Anfrage Intensivkurs 1. Examen (10./11.07.2026)"
