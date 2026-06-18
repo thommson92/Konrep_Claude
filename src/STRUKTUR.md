@@ -12,12 +12,15 @@ src/
 ├── js/
 │   ├── termine.js      gepflegte Terminliste (vom Auftraggeber editierbar)
 │   └── main.js         Anker-Navigation, Termin-Rendering, mailto-Betreff
-├── images/             optimierte Bilder (Profilbild, Justitia-Motiv, ...)
-└── fonts/              lokal eingebundene Web Fonts (kein Google-Request)
+├── images/             optimierte Bilder (Profilbild) + justitia.svg
+├── favicon.svg         Favicon (Wortmarke "K")
+├── robots.txt          SEO
+├── sitemap.xml         SEO
+└── .htaccess           HTTPS-/www-Weiterleitung, Sicherheits-Header, Caching (Strato)
 ```
 
-Zusätzlich später im Repo-Root bzw. Deployment:
-- `robots.txt`, `sitemap.xml` – SEO
-- `.htaccess` – HTTPS-/www-Weiterleitung (Strato)
+Hinweis: Es werden **keine** Web Fonts geladen – die Seite nutzt einen System-Font-Stack
+(Georgia-Serif für Überschriften, System-Sans für Fließtext). Das ist schnell und
+datenschutzfreundlich (keine externen Requests). Der Ordner `fonts/` bleibt daher leer.
 
 Verbindliche Vorgaben: siehe [../docs/Spezifikation.md](../docs/Spezifikation.md).
