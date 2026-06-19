@@ -1,4 +1,4 @@
-name: Deploy to Strato
+name: Deploy via SFTP
 
 on:
   push:
@@ -10,22 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository auschecken
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # Optional für React/Vite/Vue:
-      # - uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 22
-      # - run: npm ci
-      # - run: npm run build
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
 
-      - name: Dateien nach STRATO übertragen
-        uses: appleboy/scp-action@v1.0.0
-        with:
-          host: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22
-          source: "./*"
-          target: "/konrep/"
+      - name: Upload via SFTP
+        env:
+          HOST: ${{ secrets.SFTP_HOST }}
+          USER: ${{ secrets.SFTP_USER }}
+          PASS: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          lftp -e "
+          set sftp:auto-confirm yes;
+          open sftp://$USER:$PASS@$HOST;
+          mirror -R ./ /konrep/;
+          bye
+          "
