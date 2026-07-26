@@ -37,34 +37,21 @@
 window.KONREP_TERMINE = [
 
   {
-    datum:   "Fr 10. & Sa 11.07.2026",
-    uhrzeit: "jeweils ab 9:00 Uhr",
-    titel:   "Intensivkurs Öffentliches Recht – 1. Examen",
-    format:  "Digital",
-    details: [
-      "Besprechung/Wiederholung examensrelevanter und examenstypischer Problemstellungen aus den Pflichtrechtsgebieten des ÖR (VerfR, EuR, VwVfG, VwGO, BauR, GO, PAG, LStVG, StaatshaftungsR; insb. Standardprobleme und aktuelle Entwicklungen)"
-    ],
-    status:  "frei",
-    betreff: "Anfrage Intensivkurs 1. Examen (10./11.07.2026)"
-  },
-
-  {
-    datum:   "Herbst 2026",
+    datum:   "Do 29.10. – So 01.11.2026",
     uhrzeit: "",
     titel:   "Intensivkurs Öffentliches Recht – 2. Examen",
     format:  "Digital",
     details: [
-      "Viertägiger Intensivkurs ca. 5 Wochen vor den Examensterminen",
-      "Verwaltungsverfahrens- und Verwaltungsprozessrecht, Europarecht",
-      "Kommunalrecht, Polizei- und Sicherheitsrecht, Bau- und Immissionsschutzrecht",
-      "3 Skripte und ca. 20 Übungsfälle"
+      "Tag 1 (13:00–19:00 Uhr): Verwaltungsrecht, Verwaltungsprozessrecht, Europarecht",
+      "Tag 2 (8:45–17:15 Uhr): Kommunalrecht, Polizeirecht, Sicherheitsrecht",
+      "Tag 3+4 (8:45–17:15 Uhr): Baurecht, Immissionsschutzrecht"
     ],
-    status:  "geplant",
-    betreff: ""
+    status:  "frei",
+    betreff: "Anfrage Intensivkurs 2. Examen (29.10.-01.11.2026)"
   },
 
   {
-    datum:   "Laufend (monatlich)",
+    datum:   "Ab Mitte September 2026 (monatlich)",
     uhrzeit: "",
     titel:   "Klausurenkurs 1. Examen",
     format:  "Digital & Präsenz (München)",
