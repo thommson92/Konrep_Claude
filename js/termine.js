@@ -30,7 +30,8 @@
                   "beendet"     -> grau  "Kurs beendet"     + ausgegrauter Button (nicht
                                    klickbar; für vergangene Kurse, die sichtbar bleiben sollen)
      betreff  : Text, der beim Klick auf "Platz anfragen" in den Mail-Betreff kommt.
-                Bei Status "geplant"/"ausgebucht" wird kein Button angezeigt – das
+                Bei Status "geplant"/"ausgebucht"/"beendet" ist der Button nicht klickbar
+                bzw. wird nicht angezeigt – das
                 Feld kann dann leer bleiben: ""
 
    WICHTIG: Jeder Block endet mit einem Komma  },  . Anführungszeichen nicht vergessen.

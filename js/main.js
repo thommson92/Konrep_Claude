@@ -40,7 +40,7 @@
     beendet:    { cls: "status--beendet",    label: "Kurs beendet" }
   };
 
-  // Alternative Schreibweisen, die ebenfalls als "geplant" gelten
+  // Alternative Schreibweisen für "geplant" bzw. "beendet"
   var STATUS_ALIAS = {
     "noch nicht terminiert": "geplant",
     "noch nicht verfügbar": "geplant",
@@ -106,6 +106,7 @@
         right.appendChild(a);
       } else if (key === "beendet") {
         var disabled = el("span", "btn btn--ghost termin__btn btn--disabled", "Platz anfragen");
+        disabled.setAttribute("role", "button");
         disabled.setAttribute("aria-disabled", "true");
         right.appendChild(disabled);
       }
