@@ -27,6 +27,8 @@
                   "ausgebucht"  -> rot   "Ausgebucht"       (kein Button)
                   "geplant"     -> blau  "Termine folgen"   (kein Button; für Kurse,
                                    deren Datum noch nicht feststeht – z. B. "Herbst 2026")
+                  "beendet"     -> grau  "Kurs beendet"     + ausgegrauter Button (nicht
+                                   klickbar; für vergangene Kurse, die sichtbar bleiben sollen)
      betreff  : Text, der beim Klick auf "Platz anfragen" in den Mail-Betreff kommt.
                 Bei Status "geplant"/"ausgebucht" wird kein Button angezeigt – das
                 Feld kann dann leer bleiben: ""
@@ -35,6 +37,20 @@
    ============================================================================= */
 
 window.KONREP_TERMINE = [
+
+  {
+    datum:   "Fr 29. & Sa 30.01.2027",
+    uhrzeit: "jeweils 9:00–17:00 Uhr",
+    titel:   "Intensiv-Wiederholungskurs Öffentliches Recht – 1. Examen",
+    format:  "",
+    details: [
+      "„Öffentliches Recht auf den Punkt gebracht“",
+      "Besprechung/Wiederholung examensrelevanter und examenstypischer Problemstellungen aus den Pflichtrechtsgebieten des ÖR (VerfR, EuR, VwVfG, VwGO, BauR, GO, PAG, LStVG, StaatshaftungR; insb. Standardprobleme und aktuelle Entwicklungen)",
+      "Kosten: 100 € inkl. Kursmaterial"
+    ],
+    status:  "frei",
+    betreff: "Anfrage Intensiv-Wiederholungskurs 1. Examen (29.-30.01.2027)"
+  },
 
   {
     datum:   "Do 29.10. – So 01.11.2026",
@@ -46,7 +62,7 @@ window.KONREP_TERMINE = [
       "Tag 2 (8:45–17:15 Uhr): Kommunalrecht, Polizeirecht, Sicherheitsrecht",
       "Tag 3+4 (8:45–17:15 Uhr): Baurecht, Immissionsschutzrecht"
     ],
-    status:  "frei",
+    status:  "beendet",
     betreff: "Anfrage Intensivkurs 2. Examen (29.10.-01.11.2026)"
   },
 

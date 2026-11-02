@@ -36,7 +36,8 @@
     frei:       { cls: "status--frei",       label: "Freie Plätze" },
     warteliste: { cls: "status--warteliste", label: "Warteliste" },
     ausgebucht: { cls: "status--ausgebucht", label: "Ausgebucht" },
-    geplant:    { cls: "status--geplant",    label: "Termine folgen" }
+    geplant:    { cls: "status--geplant",    label: "Termine folgen" },
+    beendet:    { cls: "status--beendet",    label: "Kurs beendet" }
   };
 
   // Alternative Schreibweisen, die ebenfalls als "geplant" gelten
@@ -45,7 +46,9 @@
     "noch nicht verfügbar": "geplant",
     "angekündigt": "geplant",
     "angekuendigt": "geplant",
-    "termine folgen": "geplant"
+    "termine folgen": "geplant",
+    "inaktiv": "beendet",
+    "abgeschlossen": "beendet"
   };
 
   // Nur bei diesen Status wird der Button "Platz anfragen" angezeigt
@@ -71,7 +74,7 @@
       key = STATUS_ALIAS[key] || key;
       var s = STATUS[key] || STATUS.frei;
 
-      var row = el("div", "termin" + (key === "geplant" ? " termin--geplant" : ""));
+      var row = el("div", "termin" + (key === "geplant" ? " termin--geplant" : "") + (key === "beendet" ? " termin--beendet" : ""));
 
       // Spalte 1: Datum (+ optional Uhrzeit)
       var dateCol = el("div", "termin__date-col");
@@ -101,6 +104,10 @@
         var a = el("a", "btn btn--ghost termin__btn", "Platz anfragen");
         a.href = mailtoLink(t.betreff);
         right.appendChild(a);
+      } else if (key === "beendet") {
+        var disabled = el("span", "btn btn--ghost termin__btn btn--disabled", "Platz anfragen");
+        disabled.setAttribute("aria-disabled", "true");
+        right.appendChild(disabled);
       }
       row.appendChild(right);
 
