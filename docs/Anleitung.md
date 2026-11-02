@@ -7,7 +7,8 @@ Strato-Webspace geladen werden. Keine Datenbank, kein Login, keine laufende Wart
 
 1. Datei `js/termine.js` in einem Texteditor öffnen.
 2. Einträge zwischen den `{ ... }`-Blöcken anpassen (Anleitung steht oben in der Datei).
-   - `status` muss `"frei"`, `"warteliste"` oder `"ausgebucht"` sein.
+   - `status` muss `"frei"`, `"warteliste"`, `"ausgebucht"`, `"geplant"` oder `"beendet"` sein.
+   - `"beendet"` für vergangene Kurse, die sichtbar bleiben sollen (graues Badge „Kurs beendet“, ausgegrauter Button).
 3. Speichern und **nur diese Datei** auf den Webspace hochladen (Ordner `js/`).
 
 Die Termine erscheinen automatisch auf der Startseite im Abschnitt „Nächste Termine".

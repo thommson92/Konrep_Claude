@@ -255,6 +255,18 @@ img, svg { max-width: 100%; display: block; }
 .status--warteliste  { background: #fbf3e0; color: #9a6a12; }
 .status--ausgebucht  { background: #f4e7e7; color: #9a2c2c; }
 .status--geplant     { background: #e8ecf5; color: #2a3c61; }
+.status--beendet     { background: #ececec; color: #6b6b6b; }
+.btn.btn--disabled,
+.btn.btn--disabled:hover {
+  background: transparent;
+  color: #9a9a9a;
+  border-color: #c8c8c8;
+  cursor: not-allowed;
+  transform: none;
+}
+.termin--beendet { border-left-color: #c8c8c8; }
+.termin--beendet .termin__title,
+.termin--beendet .termin__date { color: var(--ink-soft); }
 .termine-note { color: var(--ink-soft); font-size: 0.95rem; margin-top: 1.25rem; }
 
 /* ---- Kontakt -------------------------------------------------------------- */
