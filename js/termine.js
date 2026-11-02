@@ -43,7 +43,7 @@ window.KONREP_TERMINE = [
     datum:   "Fr 29. & Sa 30.01.2027",
     uhrzeit: "jeweils 9:00–17:00 Uhr",
     titel:   "Intensiv-Wiederholungskurs Öffentliches Recht – 1. Examen",
-    format:  "",
+    format:  "Digital",
     details: [
       "„Öffentliches Recht auf den Punkt gebracht“",
       "Besprechung/Wiederholung examensrelevanter und examenstypischer Problemstellungen aus den Pflichtrechtsgebieten des ÖR (VerfR, EuR, VwVfG, VwGO, BauR, GO, PAG, LStVG, StaatshaftungR; insb. Standardprobleme und aktuelle Entwicklungen)",
